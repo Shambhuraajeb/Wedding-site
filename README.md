@@ -29,11 +29,11 @@ A premium cinematic wedding invitation experience built with React, Vite, Tailwi
    ```
 
 ## Project structure
-- `src/App.jsx` — app shell and page orchestration
-- `src/components/` — reusable page sections and interactions
-- `src/hooks/useLenis.js` — Lenis + GSAP scroll integration
-- `tailwind.config.js` — custom theme and font configuration
-- `src/index.css` — global Tailwind styling and visual base
+- `src/App.jsx` ï¿½ app shell and page orchestration
+- `src/components/` ï¿½ reusable page sections and interactions
+- `src/hooks/useLenis.js` ï¿½ Lenis + GSAP scroll integration
+- `tailwind.config.js` ï¿½ custom theme and font configuration
+- `src/index.css` ï¿½ global Tailwind styling and visual base
 
 ## Notes
 - Music is loaded from a remote romantic instrumental track.
