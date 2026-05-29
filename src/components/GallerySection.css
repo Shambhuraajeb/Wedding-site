@@ -1,0 +1,241 @@
+/* =========================================
+   PHOTO STACK CONTAINER
+========================================= */
+
+.photo-stack-container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 520px;
+  margin: 0 auto;
+  perspective: 1500px;
+}
+
+/* =========================================
+   PHOTO CARD
+========================================= */
+
+.photo-card {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 260px;
+  height: 330px;
+
+  margin-left: -130px;
+  margin-top: -165px;
+
+  border: none;
+  padding: 0;
+
+  background: white;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transform-origin: center center;
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.18),
+    0 12px 24px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.photo-card:hover {
+  z-index: 99 !important;
+
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.22),
+    0 18px 36px rgba(0, 0, 0, 0.10);
+}
+
+.photo-card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.photo-card-image {
+  width: 100%;
+  height: 86%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card-label {
+  height: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.card-1 {
+  z-index: 1;
+  animation: throwCard1 8s infinite;
+}
+
+.card-2 {
+  z-index: 2;
+  animation: throwCard2 8s infinite;
+  animation-delay: 1s;
+}
+
+.card-3 {
+  z-index: 3;
+  animation: throwCard3 8s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes throwCard1 {
+  0% {
+    opacity: 0;
+    transform: translate(-280px,450px) rotate(-45deg) scale(.4);
+  }
+
+  12% {
+    opacity: 1;
+    transform: translate(-80px,0) rotate(-8deg) scale(1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translate(-80px,0) rotate(-8deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-280px,450px) rotate(-45deg) scale(.4);
+  }
+}
+
+@keyframes throwCard2 {
+  0% {
+    opacity: 0;
+    transform: translate(280px,450px) rotate(45deg) scale(.4);
+  }
+
+  12% {
+    opacity: 1;
+    transform: translate(80px,12px) rotate(6deg) scale(1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translate(80px,12px) rotate(6deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(280px,450px) rotate(45deg) scale(.4);
+  }
+}
+
+@keyframes throwCard3 {
+  0% {
+    opacity: 0;
+    transform: translate(0,500px) rotate(-25deg) scale(.4);
+  }
+
+  12% {
+    opacity: 1;
+    transform: translate(0,-20px) rotate(-2deg) scale(1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translate(0,-20px) rotate(-2deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0,500px) rotate(-25deg) scale(.4);
+  }
+}
+/* =========================================
+   HEART
+========================================= */
+
+.stack-heart {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 46px;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(
+      0 12px 20px
+      rgba(255,0,80,.25)
+    );
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .photo-stack-container {
+    max-width: 380px;
+    height: 430px;
+  }
+
+  .photo-card {
+    width: 210px;
+    height: 270px;
+
+    margin-left: -105px;
+    margin-top: -135px;
+  }
+
+  .stack-heart {
+    font-size: 36px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .photo-stack-container {
+    max-width: 320px;
+    height: 360px;
+  }
+
+  .photo-card {
+    width: 180px;
+    height: 230px;
+
+    margin-left: -90px;
+    margin-top: -115px;
+  }
+
+  .photo-card-label {
+    font-size: 11px;
+  }
+
+  .stack-heart {
+    font-size: 30px;
+  }
+}
