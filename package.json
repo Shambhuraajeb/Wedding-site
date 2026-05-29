@@ -15,13 +15,13 @@
     "@fontsource/great-vibes": "^5.2.8",
     "@fontsource/playfair-display": "^5.2.8",
     "@studio-freight/lenis": "^1.0.42",
+    "@tsparticles/react": "^4.1.0",
+    "@tsparticles/slim": "^4.1.0",
     "framer-motion": "^12.40.0",
     "gsap": "^3.13.0",
     "lucide-react": "^1.16.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "react-tsparticles": "^2.12.2",
-    "tsparticles": "^4.0.5"
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
